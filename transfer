@@ -1,0 +1,18 @@
+1  #!/usr/bin/env bash
+2  # Transfers a file from our client to a server
+3  #
+4  # variables
+5  path="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
+6  filename="$(basename "${BASH_SOURCE}")"
+7  brown='\e[0;33m'
+8  reset='\033[0m'
+9  file="$1"
+10 ip="$2"
+11 user="ubuntu"
+12 key="~/.ssh/id_rsa"
+13
+14 if [ $# -eq 2 ]; then
+15    scp -i "$key" -o StrictHostKeyChe
+16 else
+17    echo -e "Usage: ${brown}${filename}${reset}
+18 fi
